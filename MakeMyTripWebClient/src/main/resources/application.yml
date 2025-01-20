@@ -1,0 +1,23 @@
+server:
+  port: 7090
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: sa
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+      
+messages:
+ links:
+    bookUrl: http://localhost:8080/irctc/bookTicket
+    getAllUrl: http://localhost:8080/irctc/getAllTickets
+    updateUrl: http://localhost:8080/irctc/updateTicket/{id}
+    url: http://localhost:8080/irctc/deleteTicket/{id}
